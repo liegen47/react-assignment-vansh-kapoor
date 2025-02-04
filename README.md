@@ -1,46 +1,121 @@
-# Getting Started with Create React App
+# React Project Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a React-based web application featuring a counter, user data form, and rich text editors. It utilizes various modern libraries such as Shadcn UI, React Spring, TypeScript, React Charts, and React Router.
 
-## Available Scripts
+## Functional Requirements
 
-In the project directory, you can run:
+### 1. Counter Component
+- Buttons for increment, decrement, and reset.
+- Maintains count across re-renders.
+- The background color level increases linearly (preferably using a Bezier curve).
+- Reset should revert the background color level to zero.
 
-### `npm start`
+### 2. User Data Form
+- Form fields: Name, Address, Email, Phone.
+- Auto-generates a User ID.
+- Saves data to local storage or RTK on form submission.
+- Displays an unsaved changes warning if the user tries to close the browser with unsaved form data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 3. Rich Text Editors
+- Visualizes user data in a rich text editor.
+- Supports formatting options (bold, italic, underline, lists).
+- Ensures data persistence.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 4. Additional Features (Optional)
+- **User Authentication:** Google Sign-In with private and public route protection.
+- **Mock authentication for validation.**
+- **Dashboard Visualization:**
+  - Displays counter and user profile visuals.
+  - Uses React Charts for user profile trends visualization.
 
-### `npm test`
+## Tech Stack
+- **Frontend:** React.js (TypeScript), React Router, React Spring
+- **State Management:** Redux Toolkit (RTK) / Local Storage
+- **Styling:** Material UI / Chakra UI / Next UI, Tailwind CSS
+- **Rich Text Editing:** React Quill
+- **Data Visualization:** Recharts
+- **Authentication:** Firebase (Google Sign-In)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Setup
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (>=16.0)
+- npm or yarn
 
-### `npm run build`
+### Installation
+```sh
+# Clone the repository
+git clone https://github.com/liegen47/react-assignment-vansh-kapoor
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Navigate into the project directory
+cd react-assignment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+npm install  # or bun install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running the Application
+```sh
+npm start  # or bun run start
+```
 
-### `npm run eject`
+### Building the Application
+```sh
+npm run build  # or bun run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Structure
+```
+📦 react-assignment
+├── 📂 src
+│   ├── 📂 components  # Reusable components
+│   ├── 📂 contexts    # Context API providers
+│   ├── 📂 hooks       # Custom hooks
+│   ├── 📂 lib         # Utility functions and libraries
+│   ├── 📂 middleware  # Middleware functions
+│   ├── 📂 pages       # Page components
+│   ├── 📂 types       # TypeScript types
+│   ├── App.css       # Global styles
+│   ├── App.tsx       # Main application component
+│   ├── App.test.tsx  # Test file
+│   ├── index.css     # Global styles
+│   ├── index.tsx     # Entry point
+│   ├── routes.tsx    # Application routing
+│   ├── reportWebVitals.ts  # Performance measuring
+│   ├── setupTests.ts # Test setup
+│   ├── react-app-env.d.ts # TypeScript environment variables
+└── .env.example      # Sample environment variables
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Dependencies
+```json
+"dependencies": {
+  "@react-spring/web": "^9.7.5",
+  "firebase": "^11.2.0",
+  "clsx": "^2.1.1",
+  "lucide-react": "^0.474.0",
+  "react": "^19.0.0",
+  "react-dom": "^19.0.0",
+  "react-icons": "^5.4.0",
+  "react-quill-new": "^3.3.3",
+  "react-router-dom": "^7.1.5",
+  "recharts": "^2.15.1",
+  "tailwindcss": "^3.0.1",
+  "typescript": "^4.9.5"
+}
+```
 
-## Learn More
+## Deliverables
+- **Source Code:** GitHub repository with meaningful commit history.
+- **Report:** Document explaining component structure and state management choices.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
+This project is for educational purposes only.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+**Author:** Vansh Kapoor  
+**Submission Date:** 2025-02-05
+
