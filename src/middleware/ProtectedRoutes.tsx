@@ -1,7 +1,7 @@
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import type React from "react";
-import { Loader2 } from "lucide-react";
+import Loading from "@/components/Loading";
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
   const location = useLocation();
 
   if (isLoading) {
-    return <Loader2 />;
+    return <Loading />;
   }
 
   if (!isAuthenticated) {

@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { User, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Navbar() {
+  const { user } = useAuth();
   return (
     <nav className="border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,12 +112,23 @@ export default function Navbar() {
             >
               FAQs
             </Link>
+            <div className="flex items-center space-x-4">
+              <Button variant="ghost" size="icon">
+                <User className="h-5 w-5" />
+              </Button>
+            </div>
           </div>
-
-          {/* User and Cart */}
-          <div className="flex items-center space-x-4">
+          <div className="flex md:hidden items-center space-x-4">
             <Button variant="ghost" size="icon">
-              <User className="h-5 w-5" />
+              {user ? (
+                <Link to="/dashboard">
+                  <User className="h-5 w-5" />
+                </Link>
+              ) : (
+                <Link to="/login">
+                  <User className="h-5 w-5" />{" "}
+                </Link>
+              )}
             </Button>
           </div>
         </div>

@@ -16,6 +16,8 @@ import {
   AlertDialogTitle,
 } from "./ui/alert-dialog";
 import type { UserData } from "../types";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { Info } from "lucide-react";
 
 const initialData: UserData = {
   id: "",
@@ -59,14 +61,28 @@ function UserForm() {
     };
     localStorage.setItem("userData", JSON.stringify(userData));
     setIsDirty(false);
-    navigate("/editor");
   };
 
   return (
     <>
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle>User Information</CardTitle>
+          <CardTitle>
+            User Information
+            <Tooltip>
+              <TooltipTrigger>
+                <Info size={12} className="ml-2 cursor-pointer" />
+              </TooltipTrigger>
+              <TooltipContent className="w-64">
+                <p>
+                  Form to collect user data (name, address, email, phone).
+                  Auto-generates user ID and saves data to local storage/RTK on
+                  submission. Displays an unsaved changes prompt if the user
+                  tries to close the browser with unsaved changes.
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
