@@ -114,7 +114,15 @@ export default function Navbar() {
             </Link>
             <div className="flex items-center space-x-4">
               <Button variant="ghost" size="icon">
-                <User className="h-5 w-5" />
+                {user ? (
+                  <Link to="/dashboard">
+                    <User className="h-5 w-5" />
+                  </Link>
+                ) : (
+                  <Link to="/login">
+                    <User className="h-5 w-5" />{" "}
+                  </Link>
+                )}
               </Button>
             </div>
           </div>
