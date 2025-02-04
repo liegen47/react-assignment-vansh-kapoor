@@ -6,7 +6,7 @@ function Dashboard() {
   return (
     <main className="min-h-screen p-8 space-y-8">
       <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2">
-        <div className="space-y-8">
+        <div className="flex flex-col items-center gap-8">
           <Counter />
           <UserForm />
         </div>
