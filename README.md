@@ -117,10 +117,6 @@ npm run build  # or bun run build
 }
 ```
 
-## Deliverables
-- **Source Code:** GitHub repository with meaningful commit history.
-- **Report:** Document explaining component structure and state management choices.
-
 ## License
 This project is for educational purposes only.
 
