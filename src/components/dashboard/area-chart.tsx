@@ -28,7 +28,7 @@ interface AreaChartComponentProps {
 const chartConfig = {
   sales: {
     label: "Sales",
-    color: "hsl(var(--chart-1))",
+    color: "#7c3aed",
   },
 } satisfies ChartConfig;
 

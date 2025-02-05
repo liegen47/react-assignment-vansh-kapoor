@@ -73,30 +73,30 @@ function RichTextEditor() {
           />
         </CardContent>
       </Card>
-      <Card className="w-full max-w-4xl">
-        <CardHeader>
-          <CardTitle>
-            Result{" "}
-            <Tooltip>
-              <TooltipTrigger>
-                <Info size={12} className="ml-2 cursor-pointer" />
-              </TooltipTrigger>
-              <TooltipContent className="w-64">
-                <p>Visualize user data.</p>
-              </TooltipContent>
-            </Tooltip>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          {userData && (
+      {userData && (
+        <Card className="w-full max-w-4xl">
+          <CardHeader>
+            <CardTitle>
+              Result{" "}
+              <Tooltip>
+                <TooltipTrigger>
+                  <Info size={12} className="ml-2 cursor-pointer" />
+                </TooltipTrigger>
+                <TooltipContent className="w-64">
+                  <p>Visualize user data.</p>
+                </TooltipContent>
+              </Tooltip>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
             <div className="mb-4">
               <h3 className="font-semibold">User Details:</h3>
               <p>Name: {userData.name}</p>
               <p>Email: {userData.email}</p>
             </div>
-          )}
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }

@@ -37,7 +37,7 @@ interface BarChartComponentProps {
 const chartConfig = {
   sales: {
     label: "Sales",
-    color: "hsl(var(--chart-1))",
+    color: "#7c3aed",
   },
   label: {
     color: "hsl(var(--background))",
@@ -51,7 +51,7 @@ export function BarChartComponent({
   className,
   title,
   description,
-  labelColor = "var(--background)",
+  labelColor = "#fff",
   labelFontSize = 12,
 }: BarChartComponentProps) {
   return (

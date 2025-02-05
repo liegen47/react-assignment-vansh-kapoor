@@ -1,9 +1,15 @@
 # React Project Assignment
+[![React](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3.3-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Recharts](https://img.shields.io/badge/Recharts-2.15.1-8884d8?style=flat&logo=react)](https://recharts.org/en-US/)
+[![React Quill](https://img.shields.io/badge/React_Quill-3.3.3-ff6f61?style=flat&logo=react)](https://github.com/zenoamaro/react-quill)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0.0-06b6d4?style=flat&logo=tailwindcss)](https://tailwindcss.com/)
 
 ## Overview
 This project is a React-based web application featuring a counter, user data form, and rich text editors. It utilizes various modern libraries such as Shadcn UI, React Spring, TypeScript, React Charts, and React Router.
+![System Overview](https://raw.githubusercontent.com/liegen47/react-assignment-vansh-kapoor/main/public/images/overview.png)
 
-## Functional Requirements
+## ✨ Functional Requirements
 
 ### 1. Counter Component
 - Buttons for increment, decrement, and reset.
@@ -23,16 +29,19 @@ This project is a React-based web application featuring a counter, user data for
 - Ensures data persistence.
 
 ### 4. Additional Features (Optional)
-- **User Authentication:** Google Sign-In with private and public route protection.
-- **Mock authentication for validation.**
-- **Dashboard Visualization:**
+- 🧩**User Authentication:** Google Sign-In with private and public route protection.
+- 📝**Mock authentication for validation.**
+- 📊**Dashboard Visualization:**
   - Displays counter and user profile visuals.
   - Uses React Charts for user profile trends visualization.
+  - Interactive data visualization with Recharts
+- 🌓 Light/Dark mode toggle
+- 📱 Responsive mobile-first design
 
 ## Tech Stack
 - **Frontend:** React.js (TypeScript), React Router, React Spring
 - **State Management:** Redux Toolkit (RTK) / Local Storage
-- **Styling:** Material UI / Chakra UI / Next UI, Tailwind CSS
+- **Styling:** Material UI / Chakra UI / Next UI/Shadcn ui, Tailwind CSS
 - **Rich Text Editing:** React Quill
 - **Data Visualization:** Recharts
 - **Authentication:** Firebase (Google Sign-In)
