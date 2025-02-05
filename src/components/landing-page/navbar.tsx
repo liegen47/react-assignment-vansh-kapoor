@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { User, Menu } from "lucide-react";
+import { User, Menu, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useAuth } from "@/contexts/AuthContext";
@@ -116,11 +116,12 @@ export default function Navbar() {
               <Button variant="ghost" size="icon">
                 {user ? (
                   <Link to="/dashboard">
-                    <User className="h-5 w-5" />
+                    <ExternalLink className="h-5 w-5" />
+                    Dashboard
                   </Link>
                 ) : (
                   <Link to="/login">
-                    <User className="h-5 w-5" />{" "}
+                    <User className="h-5 w-5" /> Login
                   </Link>
                 )}
               </Button>
@@ -130,11 +131,12 @@ export default function Navbar() {
             <Button variant="ghost" size="icon">
               {user ? (
                 <Link to="/dashboard">
-                  <User className="h-5 w-5" />
+                  <ExternalLink className="h-5 w-5" />
+                  Dashboard
                 </Link>
               ) : (
                 <Link to="/login">
-                  <User className="h-5 w-5" />{" "}
+                  <User className="h-5 w-5" /> Login
                 </Link>
               )}
             </Button>
